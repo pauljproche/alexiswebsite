@@ -95,26 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error loading the header:', error));
 });
-
-// This script should be placed at the bottom of the HTML file or within a DOMContentLoaded event
-// Comment back out if doesn't work (3:27)
-    document.addEventListener('DOMContentLoaded', function() {
-    // Delegation to handle clicks on dynamically added elements
-    document.body.addEventListener('click', function(e) {
-        if (e.target.classList.contains('menu-icon')) {
-            toggleMenu();
-        }
-    });
-});
-
-function toggleMenu() {
-    var menu = document.querySelector('.menu-content');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
-}
 </script>
 </body>
 </html>
