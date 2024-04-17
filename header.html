@@ -1,5 +1,19 @@
 <!-- header.html -->
 <div id="header" style="text-align: right; padding: 20px; position: absolute; right: 0; top: 0; width: 100%;">
-    <a href="about.html" class="header-button" style="text-decoration: none; color: white; background-color: #333; padding: 10px 15px; margin-right: 20px; border-radius: 5px; font-family: 'Raleway', sans-serif;">About Me</a>
-    <a href="contact.html" class="header-button" style="text-decoration: none; color: white; background-color: #333; padding: 10px 15px; border-radius: 5px; font-family: 'Raleway', sans-serif;">Contact</a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-content" style="display: none;">
+        <a href="about.html" class="header-button">About Me</a>
+        <a href="contact.html" class="header-button">Contact</a>
+    </div>
 </div>
+
+<script>
+function toggleMenu() {
+    var menu = document.querySelector('.menu-content');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+</script>
