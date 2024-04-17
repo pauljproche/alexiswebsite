@@ -23,7 +23,7 @@
 }
 
 .menu-icon {
-    display: none; /* Hidden by default, shown only in mobile view */
+    /*display: none;*/ /* Hidden by default, shown only in mobile view */
     font-size: 30px;
     cursor: pointer;
 }
@@ -39,7 +39,7 @@
         display: block; /* Show hamburger icon */
     }
     .menu-content {
-        display: none; /* Hide menu items initially */
+        /*display: none;*/ /* Hide menu items initially */
         flex-direction: column; /* Stack vertically on mobile */
         width: 100%; /* Full width */
         position: absolute;
