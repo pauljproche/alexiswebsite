@@ -10,27 +10,46 @@
     right: 0;
     top: 0;
     width: 100%;
-    opacity: 0; /* Start invisible */
-    animation: fadeIn 1s ease-out 2s forwards; /* Fade in after 2 seconds */
 }
 
 .header-button {
+    margin-left: 10px;
     text-decoration: none;
+    background-color: #444;
     color: white;
-    background-color: #333;
-    padding: 10px 15px;
-    margin-right: 20px;
-    border-radius: 5px;
+    padding: 8px 16px;
+    border-radius: 4px;
     font-family: 'Raleway', sans-serif;
 }
 
-/* Remove the margin-right for the last button */
-#header .header-button:last-child {
-    margin-right: 0;
+.menu-icon {
+    display: none; /* Hidden by default, shown only in mobile view */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: flex; /* Flex layout for desktop */
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 @media (max-width: 768px) {
-    #header {
-        display: none;
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+    }
+    .menu-content {
+        display: none; /* Hide menu items initially */
+        flex-direction: column; /* Stack vertically on mobile */
+        width: 100%; /* Full width */
+        position: absolute;
+        right: 0;
+        top: 60px; /* Position below the hamburger icon */
+        background-color: #333; /* Background color for the dropdown */
+    }
+    .header-button {
+        display: block;
+        text-align: center;
+        width: 100%;
     }
 }
