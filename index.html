@@ -23,6 +23,7 @@
         width: 100%; /* Full width */
         max-width: 1200px; /* Maximum width of the content */
         margin-left: 5%; /* Margin from the left */
+        text-align: left;
     }
     .header {
         font-size: 36px;
@@ -50,6 +51,16 @@
     }
     .button:hover {
         background-color: darkblue;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            margin-left: 0; /* Reset the left margin */
+            text-align: center; /* Center text for mobile */
+        }
+        .buttons {
+            justify-content: center; /* Center buttons when stacked */
+        }
     }
 </style>
 </head>
