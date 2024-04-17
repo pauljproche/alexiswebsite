@@ -61,7 +61,6 @@
     .button:hover {
         background-color: darkblue;
     }
-
     @media (max-width: 768px) {
         .container {
             margin-left: 0; /* Reset the left margin */
@@ -76,7 +75,6 @@
 </style>
 </head>
 <body>
-
 <div class="container">
     <div class="header">ALEXIS ROCHE</div>
     <div class="subheader">
@@ -94,10 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.text())
         .then(html => {
             document.body.insertAdjacentHTML('afterbegin', html);
-            // Now apply event handlers
-            document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
         })
         .catch(error => console.error('Error loading the header:', error));
+});
+
+// This script should be placed at the bottom of the HTML file or within a DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+    // Delegation to handle clicks on dynamically added elements
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('menu-icon')) {
+            toggleMenu();
+        }
+    });
 });
 
 function toggleMenu() {
