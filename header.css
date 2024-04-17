@@ -11,7 +11,7 @@
     top: 0;
     width: 100%;
     opacity: 0; /* Start invisible */
-    animation: fadeIn 1s ease-out 0.5s forwards; /* Fade in after 0.5 seconds */
+    animation: fadeIn 1s ease-out 2s forwards; /* Fade in after 2 seconds */
 }
 
 .header-button {
