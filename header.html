@@ -1,7 +1,7 @@
 <!-- header.html -->
 <div id="header" style="text-align: right; padding: 20px; position: absolute; right: 0; top: 0; width: 100%;">
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <div class="menu-content" style="display: none;">
+    <div class="menu-content">
         <a href="about.html" class="header-button">About Me</a>
         <a href="contact.html" class="header-button">Contact</a>
     </div>
@@ -10,10 +10,6 @@
 <script>
 function toggleMenu() {
     var menu = document.querySelector('.menu-content');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
+    menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
 }
 </script>
