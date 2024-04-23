@@ -26,17 +26,20 @@
         display: flex;
         margin-top: 20px;
     }
-    .text-section {
-        width: 60%;
+    .text-section, .image-section, .media-section {
+        flex: 1; /* Adjusts the flex property to split space evenly */
+        padding: 0 10px; /* Adds horizontal padding for spacing */
+    }
+    .image-section img {
+        width: 100%;
+        height: auto; /* Ensures the image scales correctly */
+        display: block; /* Removes any default margin/padding */
     }
     .media-section {
-        width: 40%;
-        padding-left: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .media-section img,
     .media-section video {
         width: 100%;
         margin-bottom: 20px;
@@ -55,9 +58,11 @@
     <div class="about-section">
         <div class="text-section">
             <h2>About Me.</h2>
-            <p><img src="images/alexis-bio.jpg" alt="Alexis bio pic" width="360" height="640">
             <p>Alexis Roche is a distinguished linguist and vocalist, known for his groundbreaking work at the intersection of language and music. After earning his Bachelor's degree in Linguistics, he explored the cognitive link between linguistic ability and musical talent. Through his interdisciplinary work, he contributes significantly to the linguistic and musical communities.</p>
             <!-- Add more content as needed -->
+        </div>
+        <div class="image-section">
+            <img src="images/alexis-bio.jpg" alt="Alexis bio pic">
         </div>
         <div class="media-section">
             <!-- Replace with actual image/video URLs -->
