@@ -11,8 +11,6 @@
         padding: 0;
         color: white;
         background-color: #000;
-        display: flex;
-        flex-direction: column;
     }
     .header {
         padding-top: 20px;
@@ -21,32 +19,22 @@
         text-align: center;
     }
     .portfolio {
+        display: flex;
+        justify-content: space-around; /* Adjusts the spacing to use space around elements */
         padding: 50px;
+    }
+    .audio-section, .video-section {
+        width: 45%; /* Equal width to maintain balance */
         display: flex;
-        justify-content: space-between;
-    }
-    .audio-section {
-        width: 45%;
-    }
-    .video-section {
-        width: 45%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .video-section video {
-        width: 100%;
+        flex-direction: column; /* Ensures vertical listing */
     }
     .section-title {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    .audio-files {
-        margin-bottom: 30px;
-    }
-    audio {
+    audio, video {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 20px; /* Provides consistent spacing between media elements */
     }
 </style>
 </head>
@@ -57,21 +45,29 @@
 <div class="portfolio">
     <div class="audio-section">
         <div class="section-title">Audio Files</div>
-        <div class="audio-files">
-            <!-- Audio files to be replaced with actual audio URLs -->
-            <audio controls></audio>
-            <audio controls></audio>
-            <audio controls></audio>
-            <audio controls></audio>
-        </div>
+        <!-- Audio files listed vertically -->
+        <audio controls>
+            <source src="path_to_audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <audio controls>
+            <source src="path_to_audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <!-- Add more audio files as needed -->
     </div>
     <div class="video-section">
         <div class="section-title">Videos</div>
-        <!-- Video to be replaced with actual video URL -->
+        <!-- Videos listed vertically -->
         <video controls>
-            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video1.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <video controls>
+            <source src="videos/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Add more videos as needed -->
     </div>
 </div>
 
