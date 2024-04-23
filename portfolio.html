@@ -20,30 +20,35 @@
     }
     .portfolio {
         display: flex;
-        justify-content: space-around; /* Adjusts the spacing to use space around elements */
+        justify-content: space-between; /* Changed to 'space-between' for better spacing */
         padding: 50px;
     }
     .audio-section, .video-section {
-        width: 45%; /* Equal width to maintain balance */
+        flex: 1; /* Allows flex to automatically adjust the width */
         display: flex;
         flex-direction: column; /* Ensures vertical listing */
-    }
-    .media-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .media-section video {
-        width: 100%;
-        margin-bottom: 20px;
+        margin-right: 20px; /* Adds space to the right of each section */
     }
     .section-title {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    audio, video {
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        margin-bottom: 20px; /* Provides consistent spacing between media elements */
+        height: 100%;
+        border: 0; /* Removes border */
+    }
+    audio {
+        width: 100%;
+        margin-bottom: 20px; /* Provides consistent spacing between audio elements */
     }
 </style>
 </head>
@@ -67,13 +72,13 @@
     </div>
     <div class="video-section">
         <div class="section-title">Videos</div>
-        <!-- Videos listed vertically -->
-        <div class="media-section">
-            <iframe src="https://player.vimeo.com/video/938335462?h=c321927dd2" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <!-- Video container for responsive iframe -->
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938335462?h=c321927dd2" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
-        <div class="media-section">
-            <iframe src="https://player.vimeo.com/video/938337783?h=3260036786" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938337783?h=3260036786" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
     </div>
 </div>
 
