@@ -67,6 +67,31 @@
         border-radius: 5px;
         text-align: center; /* Ensure text is centered if button width is adjusted */
     }
+    
+    .audio-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the left by default */
+    }
+    .audio-button {
+        display: block;
+        padding: 10px 20px;
+        width: auto;
+        max-width: 200px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .audio-button:nth-child(odd) {
+        align-self: flex-start; /* Left align odd buttons */
+    }
+    .audio-button:nth-child(even) {
+        align-self: flex-end; /* Right align even buttons */
+    }
 </style>
 </head>
 <body>
