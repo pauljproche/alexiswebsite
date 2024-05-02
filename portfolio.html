@@ -53,11 +53,6 @@
         margin-bottom: 400px;
         display: none; /* Audio is hidden initially */
     }
-    .audio-section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Aligns items to the left by default */
-    }
     .audio-button {
         display: block;
         padding: 10px 20px;
@@ -71,10 +66,10 @@
         border-radius: 5px;
         text-align: center;
     }
-    .audio-button:nth-child(odd) {
+    .audio-wrapper:nth-child(odd) .audio-button {
         align-self: flex-start; /* Left align odd buttons */
     }
-    .audio-button:nth-child(even) {
+    .audio-wrapper:nth-child(even) .audio-button {
         align-self: flex-end; /* Right align even buttons */
     }
 </style>
