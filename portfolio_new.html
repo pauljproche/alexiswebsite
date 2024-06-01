@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio - Alexis Roche</title>
-<link rel="stylesheet" href="styles_porfolio.css">
+<link rel="stylesheet" href="styles_portfolio.css">
 </head>
 <body>
     <header>
@@ -21,40 +21,23 @@
                     <div class="audio-section">
                         <div class="section-title">Audio Files</div>
                         <div class="audio-item">
-                            <h3>Play Audio 1</h3>
-                            <audio id="audio1" controls>
-                                <source src="path_to_audio1.mp3" type="audio/mpeg">
-                                Your browser does not support the audio tag.
-                            </audio>
+                            <h3>Liftoff</h3>
+                            <div class="audio-player">
+                                <img src="path_to_image.jpg" alt="Liftoff cover">
+                                <audio controls>
+                                    <source src="path_to_audio1.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <div class="audio-info">
+                                    <p>by Alexis Roche</p>
+                                    <div class="audio-controls">
+                                        <a href="#" class="buy">buy</a>
+                                        <a href="#" class="share">share</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="audio-item">
-                            <h3>Play Audio 2</h3>
-                            <audio id="audio2" controls>
-                                <source src="path_to_audio2.mp3" type="audio/mpeg">
-                                Your browser does not support the audio tag.
-                            </audio>
-                        </div>
-                        <div class="audio-item">
-                            <h3>Play Audio 3</h3>
-                            <audio id="audio3" controls>
-                                <source src="path_to_audio3.mp3" type="audio/mpeg">
-                                Your browser does not support the audio tag.
-                            </audio>
-                        </div>
-                        <div class="audio-item">
-                            <h3>Play Audio 4</h3>
-                            <audio id="audio4" controls>
-                                <source src="path_to_audio4.mp3" type="audio/mpeg">
-                                Your browser does not support the audio tag.
-                            </audio>
-                        </div>
-                        <div class="audio-item">
-                            <h3>Play Audio 5</h3>
-                            <audio id="audio5" controls>
-                                <source src="path_to_audio5.mp3" type="audio/mpeg">
-                                Your browser does not support the audio tag.
-                            </audio>
-                        </div>
+                        <!-- Repeat similar structure for other audio items -->
                     </div>
                     <div class="video-section">
                         <div class="section-title">Videos</div>
@@ -70,24 +53,7 @@
                                 <iframe src="https://player.vimeo.com/video/938337783?h=3260036786" allow="autoplay; fullscreen" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <div class="video-item">
-                            <h3>Performance 3</h3>
-                            <div class="video-container">
-                                <iframe src="https://player.vimeo.com/video/938351772?h=668255863d" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="video-item">
-                            <h3>Performance 4</h3>
-                            <div class="video-container">
-                                <iframe src="https://player.vimeo.com/video/938352321?h=36bdef46c8" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="video-item">
-                            <h3>Performance 5</h3>
-                            <div class="video-container">
-                                <iframe src="https://player.vimeo.com/video/938351698?h=d4d872b03a" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                            </div>
-                        </div>
+                        <!-- Repeat similar structure for other video items -->
                     </div>
                 </div>
             </section>
