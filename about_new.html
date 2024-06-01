@@ -13,6 +13,7 @@
             background-color: #000;
         }
         .container {
+            position: relative;
             padding: 20px;
         }
         .header {
@@ -22,15 +23,36 @@
             padding-bottom: 20px;
         }
         .about-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative;
             text-align: center;
             padding: 0 20px;
         }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/alexis-bio.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
         .about-content {
             max-width: 800px;
-            margin-bottom: 40px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
         }
         .about-content h2 {
             font-size: 30px;
@@ -39,19 +61,9 @@
             font-size: 18px;
             line-height: 1.6;
         }
-        .image-section {
-            max-width: 400px;
-            margin: 20px 0;
-        }
-        .image-section img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-        }
         .video-section {
             max-width: 800px;
-            margin: 20px 0;
+            margin: 20px auto;
         }
         .video-section iframe {
             width: 100%;
@@ -83,13 +95,12 @@
 <div class="container">
     <div class="header">ALEXIS ROCHE</div>
     <div class="about-section">
+        <div class="background-image"></div>
+        <div class="overlay"></div>
         <div class="about-content">
             <h2>About Me.</h2>
             <p>Alexis Roche is a distinguished linguist and vocalist, known for his groundbreaking work at the intersection of language and music. After earning his Bachelor's degree in Linguistics, he explored the cognitive link between linguistic ability and musical talent. Through his interdisciplinary work, he contributes significantly to the linguistic and musical communities.</p>
             <!-- Add more content as needed -->
-        </div>
-        <div class="image-section">
-            <img src="images/alexis-bio.jpg" alt="Alexis bio pic">
         </div>
         <div class="video-section">
             <iframe src="https://player.vimeo.com/video/938335462?h=c321927dd2" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
