@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Alexis Roche</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color: #000;
+    }
+    .header {
+        padding-top: 20px;
+        font-size: 36px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    .portfolio {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+    }
+    .audio-section, .video-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        margin-bottom: 20px;
+        height: 0;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    audio {
+        width: 100%;
+        margin-bottom: 400px;
+        display: none; /* Audio is hidden initially */
+    }
+    .audio-button {
+        display: block;
+        padding: 10px 20px;
+        width: auto;
+        max-width: 200px;
+        margin-bottom: 400px;
+        cursor: pointer;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .audio-wrapper:nth-child(odd) .audio-button {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .audio-wrapper:nth-child(even) .audio-button {
+        margin-right: auto;
+        margin-left: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">ALEXIS ROCHE</div>
+<div class="portfolio">
+    <div class="audio-section">
+        <div class="section-title">Audio Files</div>
+        <button class="audio-button" onclick="toggleAudio(this, 'audio1')">Play Audio 1</button>
+        <audio id="audio1" controls>
+            <source src="path_to_audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <button class="audio-button" onclick="toggleAudio(this, 'audio2')">Play Audio 2</button>
+        <audio id="audio2" controls>
+            <source src="path_to_audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <button class="audio-button" onclick="toggleAudio(this, 'audio3')">Play Audio 3</button>
+        <audio id="audio3" controls>
+            <source src="path_to_audio3.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <button class="audio-button" onclick="toggleAudio(this, 'audio4')">Play Audio 4</button>
+        <audio id="audio4" controls>
+            <source src="path_to_audio4.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <button class="audio-button" onclick="toggleAudio(this, 'audio5')">Play Audio 5</button>
+        <audio id="audio5" controls>
+            <source src="path_to_audio5.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    <div class="video-section">
+        <div class="section-title">Videos</div>
+        <!-- Video container for responsive iframe -->
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938335462?h=c321927dd2" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938337783?h=3260036786" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938351772?h=668255863d" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938352321?h=36bdef46c8" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938351698?h=d4d872b03a" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleAudio(button, audioId) {
+        var audio = document.getElementById(audioId);
+        audio.style.display = 'block'; // Show the audio element
+        button.style.display = 'none'; // Hide the button
+    }
+</script>
+
+</body>
+</html>
