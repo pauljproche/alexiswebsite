@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis Roche Music</title>
+    <link rel="stylesheet" href="styles_contact.css">
+</head>
+<body>
+    <header>
+        <h1>ALEXIS ROCHE</h1>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="post">
+                <label for="message-type">What kind of message do you want to send?</label>
+                <select id="message-type" name="message-type" required>
+                    <option value="">Select an option</option>
+                    <option value="inquiry">Inquiry</option>
+                    <option value="support">Support</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+                <div>
+                    <label for="first-name">Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Sign up for news and updates</label>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://wa.me/your-link"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="https://www.linkedin.com/in/your-link"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="mailto:your-email@example.com"><img src="email-icon.png" alt="Email"></a>
+        </div>
+    </footer>
+</body>
+</html>
