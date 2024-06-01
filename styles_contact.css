@@ -22,7 +22,7 @@ header {
 }
 
 main {
-    animation: changeBackground 25s infinite; /* Adjust duration as needed */
+    animation: changeBackground 5s infinite; /* Adjust duration as needed */
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2em;
