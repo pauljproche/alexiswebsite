@@ -1,10 +1,9 @@
 @keyframes changeBackground {
-    0% { background-image: url('images/image1.jpeg'); }
-    20% { background-image: url('images/image2.jpeg'); }
-    40% { background-image: url('images/image3.jpeg'); }
-    60% { background-image: url('images/image4.jpeg'); }
-    80% { background-image: url('images/image5.jpeg'); }
-    100% { background-image: url('images/image1.jpeg'); }
+    0% { background-image: url('images/beijing1.jpeg'); }
+    40% { background-image: url('images/boston.jpg'); }
+    60% { background-image: url('images/brazil.jpg'); }
+    80% { background-image: url('images/paris.jpeg'); }
+    100% { background-image: url('images/beijing1.jpeg'); }
 }
 
 body {
