@@ -1,7 +1,20 @@
 <!-- header.html -->
+<style>
+@media (min-width: 769px) {
+    .menu-content {
+        display: block !important;
+    }
+}
+@media (max-width: 768px) {
+    .menu-content {
+        display: none;
+    }
+}
+</style>
+
 <div id="header" style="text-align: right; padding: 20px; position: absolute; right: 0; top: 0; width: 100%;">
     <div class="menu-icon">☰</div>
-    <div class="menu-content" style="display: none;">
+    <div class="menu-content">
         <a href="about_new.html" class="header-button">About Me</a>
         <a href="contact_new.html" class="header-button">Contact</a>
     </div>
@@ -10,15 +23,24 @@
 <script>
 function toggleMenu() {
     var menu = document.querySelector('.menu-content');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
+    if (window.innerWidth <= 768) {
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
     }
 }
 
-    
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.menu-icon').onclick = toggleMenu;
+    window.addEventListener('resize', function() {
+        var menu = document.querySelector('.menu-content');
+        if (window.innerWidth > 768) {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
 });
 </script>
