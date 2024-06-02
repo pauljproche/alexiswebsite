@@ -45,6 +45,25 @@
             </form>
         </section>
     </main>
+    <script> 
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('afterbegin', html);
+                // Now that the header is loaded, we can safely add the onclick handlers
+                document.querySelector('.menu-icon').onclick = function() {
+                    var menu = document.querySelector('.menu-content');
+                    if (menu.style.display === 'block') {
+                        menu.style.display = 'none';
+                    } else {
+                        menu.style.display = 'block';
+                    }
+                };
+            })
+            .catch(error => console.error('Error loading the header:', error));
+    });
+    </script>
     <footer>
         <div class="social-media">
             <a href="https://wa.me/your-link"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
