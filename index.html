@@ -6,103 +6,89 @@
 <title>Alexis Roche</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/header.css">
 <style>
-    body, html {
-        height: 100%;
-        margin: 0;
-    }
-    body {
-        font-family: 'Raleway', 'Montserrat', Arial, sans-serif;
-        color: white;
-        padding: 0;
-        background: url('images/profile.jpg') no-repeat center center fixed; 
-        background-size: cover;
-        display: flex;
-        align-items: center; /* Aligns .container vertically */
-        justify-content: center; /* Aligns .container horizontally */
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    .container {
-        width: 100%; /* Full width */
-        max-width: 1200px; /* Maximum width of the content */
-        margin-left: 5%; /* Margin from the left */
-        text-align: left;
-        opacity: 0; /* Start with the elements invisible */
-        animation: fadeIn 1s ease 1s forwards; /* Start after 1 second and fade in */
-    }
-    .header {
-        font-size: 36px;
-        letter-spacing: 5px;
-    }
-    .subheader {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    .buttons {
-        display: flex;
-        flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
-    }
-    .button {
-        border: none;
-        padding: 10px 20px;
-        margin: 0 10px 10px 0; /* Space between buttons and below for wrapping */
-        border-radius: 20px;
-        background-color: blue;
-        color: white;
-        cursor: pointer;
-        text-transform: uppercase;
-        text-decoration: none;
-        display: block; /* Makes the anchor behave like a block for padding/margin */
-    }
-    .button:hover {
-        background-color: darkblue;
-    }
-    @media (max-width: 768px) {
-        .container {
-            margin-left: 0; /* Reset the left margin */
-            text-align: center; /* Center text for mobile */
-            opacity: 0; /* Start with the elements invisible */
-            animation: fadeIn 1s ease 1s forwards; /* Start after 1 second and fade in */
-        }
-        .buttons {
-            justify-content: center; /* Center buttons when stacked */
-        }
-    }
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Raleway', 'Montserrat', Arial, sans-serif;
+  color: white;
+  background: url('images/profile.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 5%;
+  text-align: left;
+  animation: fadeIn 1s ease 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.subheader {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    text-align: center;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}
 </style>
 </head>
 <body>
 <div class="container">
-    <!--<div class="header">ALEXIS ROCHE</div> -->
-    <div class="subheader">
-        <h1>Alexis Roche</h1>
-        <p>Vocalist. Linguist. Entrepreneur.</p>
-    </div>
-    <div class="buttons">
-        <a href="contact_new.html" class="button">Contact Me</a>
-        <a href="portfolio_new.html" class="button">Portfolio</a>
-    </div>
+  <div class="subheader">
+    <h1>Alexis Roche</h1>
+    <p>Vocalist. Linguist. Entrepreneur.</p>
+  </div>
+  <div class="buttons">
+    <a href="contact_new.html" class="button">Contact Me</a>
+    <a href="portfolio_new.html" class="button">Portfolio</a>
+  </div>
 </div>
 <script> 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.body.insertAdjacentHTML('afterbegin', html);
-            // Now that the header is loaded, we can safely add the onclick handlers
-            document.querySelector('.menu-icon').onclick = function() {
-                var menu = document.querySelector('.menu-content');
-                if (menu.style.display === 'block') {
-                    menu.style.display = 'none';
-                } else {
-                    menu.style.display = 'block';
-                }
-            };
-        })
-        .catch(error => console.error('Error loading the header:', error));
+  fetch('header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('afterbegin', html);
+    })
+    .catch(error => console.error('Error loading the header:', error));
 });
 </script>
 </body>
